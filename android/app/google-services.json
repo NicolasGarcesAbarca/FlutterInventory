@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1012733404472",
+    "project_id": "catalog-ff22d",
+    "storage_bucket": "catalog-ff22d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1012733404472:android:4f0771c7e10bf882e48dcd",
+        "android_client_info": {
+          "package_name": "com.inventory.inventory"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACoUQ2CirIiUllwExTcgDbdgWQuzzLeVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
