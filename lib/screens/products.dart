@@ -25,20 +25,24 @@ class _ProductsPageState extends State<ProductsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: FutureBuilder<List<Product>>(
-        future: productsFuture,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const CircularProgressIndicator();
-          } else if (snapshot.hasData) {
-            final products = snapshot.data!;
-            return ListProducts(products: products);
-          } else {
-            return const Text("Error");
-          }
-        },
-      ),
-    );
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("Productos"),
+        ),
+        body: Center(
+          child: FutureBuilder<List<Product>>(
+            future: productsFuture,
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const CircularProgressIndicator();
+              } else if (snapshot.hasData) {
+                final products = snapshot.data!;
+                return ListProducts(products: products);
+              } else {
+                return const Text("Error");
+              }
+            },
+          ),
+        ));
   }
 }

@@ -22,23 +22,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepOrange),
           useMaterial3: true,
         ),
-        home: DefaultTabController(
-            length: 3,
-            child: Scaffold(
-              appBar: AppBar(
-                bottom: const TabBar(
-                  tabs: [
-                    Tab(icon: Icon(Icons.all_inbox)),
-                    Tab(icon: Icon(Icons.directions_transit)),
-                    Tab(icon: Icon(Icons.directions_bike)),
-                  ],
-                ),
-              ),
-              body: const TabBarView(children: [
-                ProductsPage(),
-                Icon(Icons.access_alarm_rounded),
-                Icon(Icons.ad_units_sharp)
-              ]),
-            )));
+        home: const ProductsPage());
   }
 }
