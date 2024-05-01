@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:inventory/screens/products.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -26,18 +27,17 @@ class MyApp extends StatelessWidget {
               appBar: AppBar(
                 bottom: const TabBar(
                   tabs: [
-                    Tab(icon: Icon(Icons.directions_car)),
+                    Tab(icon: Icon(Icons.all_inbox)),
                     Tab(icon: Icon(Icons.directions_transit)),
                     Tab(icon: Icon(Icons.directions_bike)),
                   ],
                 ),
               ),
               body: const TabBarView(children: [
-                Icon(Icons.ac_unit_rounded),
+                ProductsPage(),
                 Icon(Icons.access_alarm_rounded),
                 Icon(Icons.ad_units_sharp)
               ]),
-            )) //const MyHomePage(title: 'Flutter Demo Home Page'),
-        );
+            )));
   }
 }
