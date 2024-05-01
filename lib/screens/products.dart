@@ -29,7 +29,8 @@ class _ProductsPageState extends State<ProductsPage> {
         appBar: AppBar(
           title: const Text("Productos"),
         ),
-        body: Center(
+        body: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: FutureBuilder<List<Product>>(
             future: productsFuture,
             builder: (context, snapshot) {
