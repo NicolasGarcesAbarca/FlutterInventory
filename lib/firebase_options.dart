@@ -59,4 +59,5 @@ class DefaultFirebaseOptions {
     projectId: 'catalog-ff22d',
     storageBucket: 'catalog-ff22d.appspot.com',
   );
+
 }

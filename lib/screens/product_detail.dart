@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inventory/models/products.dart';
+import 'package:inventory/widgets/image_storage.dart';
 
 class ProductDetailPage extends StatelessWidget {
   final Product product;
@@ -22,8 +23,8 @@ class ProductDetailPage extends StatelessWidget {
               children: [
                 Container(
                   padding: EdgeInsets.only(bottom: 14),
-                  child: Image.asset(
-                    'assets/A.png',
+                  child: ImageFromStorage(
+                    product: product,
                     width: 200,
                     height: 200,
                   ),
