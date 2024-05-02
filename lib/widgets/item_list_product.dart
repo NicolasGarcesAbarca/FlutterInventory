@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:inventory/models/products.dart';
 import 'package:inventory/screens/product_detail.dart';
+import 'package:inventory/widgets/image_storage.dart';
 
 class ItemListProduct extends StatelessWidget {
   final Product product;
@@ -27,11 +28,8 @@ class ItemListProduct extends StatelessWidget {
           child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(
                 margin: EdgeInsets.only(right: 10),
-                child: Image.asset(
-                  'assets/A.png',
-                  width: 100,
-                  height: 100,
-                )),
+                child: ImageFromStorage(
+                    product: product, width: 100, height: 100)),
             Flexible(
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

@@ -51,6 +51,7 @@ class _ImageFromStorageState extends State<ImageFromStorage> {
                   url,
                   width: widget.width,
                   height: widget.height,
+                  fit: BoxFit.cover,
                 );
               } else {
                 return Container(
