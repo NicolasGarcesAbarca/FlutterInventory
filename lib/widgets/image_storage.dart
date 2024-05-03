@@ -41,10 +41,10 @@ class _ImageFromStorageState extends State<ImageFromStorage> {
             future: futureUrl,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return Container(
+                return SizedBox(
                     width: widget.width,
                     height: widget.height,
-                    child: Center(child: CircularProgressIndicator()));
+                    child: const Center(child: CircularProgressIndicator()));
               } else if (snapshot.hasData) {
                 final url = snapshot.data!;
                 return Image.network(
@@ -54,10 +54,10 @@ class _ImageFromStorageState extends State<ImageFromStorage> {
                   fit: BoxFit.cover,
                 );
               } else {
-                return Container(
+                return SizedBox(
                     width: widget.width,
                     height: widget.height,
-                    child: Text("Error"));
+                    child: const Text("Error"));
               }
             }));
   }

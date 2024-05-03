@@ -16,13 +16,13 @@ class ProductDetailPage extends StatelessWidget {
       body: FractionallySizedBox(
         widthFactor: 1,
         child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  padding: EdgeInsets.only(bottom: 14),
+                  padding: const EdgeInsets.only(bottom: 14),
                   child: ImageFromStorage(
                     product: product,
                     width: 200,
@@ -31,7 +31,7 @@ class ProductDetailPage extends StatelessWidget {
                 ),
                 Container(
                   child: Text(
-                    product.code ?? "-",
+                    product.code,
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
@@ -39,16 +39,17 @@ class ProductDetailPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                    padding: EdgeInsets.only(bottom: 14),
+                    padding: const EdgeInsets.only(bottom: 14),
                     child: Text(
-                      product.name ?? "-",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                      product.name,
+                      style: const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.w400),
                     )),
                 Container(
                     child: Text(
-                  product.description ?? "-",
-                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
+                  product.description,
+                  style: const TextStyle(
+                      fontSize: 12, fontWeight: FontWeight.w300),
                 ))
               ],
             )),

@@ -1,25 +1,19 @@
-class Product {
-  String? name;
-  String? code;
-  String? value;
-  String? chilecompra;
-  String? category;
-  String? description;
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:flutter/foundation.dart';
+part 'products.freezed.dart';
+part 'products.g.dart';
 
-  Product(
-      {this.name,
-      this.code,
-      this.value,
-      this.chilecompra,
-      this.category,
-      this.description});
+@freezed
+class Product with _$Product {
+  factory Product({
+    required String name,
+    required String code,
+    required String value,
+    required String chilecompra,
+    required String category,
+    required String description,
+  }) = _Product;
 
-  Product.fromJson(Map<String, dynamic> json) {
-    name = json['name'];
-    code = json['code'];
-    value = json['value'];
-    chilecompra = json['chilecompra'];
-    category = json['category'];
-    description = json['description'];
-  }
+  factory Product.fromJson(Map<String, dynamic> json) =>
+      _$ProductFromJson(json);
 }
