@@ -10,10 +10,13 @@ class ListProducts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      shrinkWrap: true,
       itemCount: products.length,
       itemBuilder: (context, index) {
         final product = products[index];
-        return ItemListProduct(product: product);
+        return Align(
+            alignment: Alignment.center,
+            child: ItemListProduct(product: product));
       },
     );
   }
